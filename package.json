@@ -1,10 +1,9 @@
 {
-  "name": "pandoras-box",
+  "name": "pandoras-bx",
   "version": "0.0.1",
   "description": "Pandoras Box ",
   "main": "src/main.ts",
   "scripts": {
-    "start": "ts-node src/main.ts",
     "test": "\"echo \\\"Error: no test specified\\\"\""
   },
   "author": "naveen_r_sam",
