@@ -1,13 +1,12 @@
 import * as crypto from 'crypto';
 import { dateTimeToTimestamp, reverseBuffer } from '../util/helpers';
 
-// Function to encrypt data using AES-256-CBC
-export function whisper(
+// Function to encrypt data using AES-256-CBC with time-based condition
+export function hibernate(
   data: string,
   key: Buffer,
   unlockDateTimeStr: string,
-  iv1?: Buffer,
-  curse?: boolean
+  iv1?: Buffer
 ): string {
   const iv1Buffer = iv1 || crypto.randomBytes(16); // Use provided IV or generate a new one
   const cipher1 = crypto.createCipheriv('aes-256-cbc', key, iv1Buffer);
@@ -17,11 +16,7 @@ export function whisper(
 
   // Convert unlock date-time to UTC timestamp
   const unlockTime = dateTimeToTimestamp(unlockDateTimeStr);
-  let combinedData = `${unlockTime}:${encryptedData}`; // Combine unlock time with encrypted data
-
-  if (curse) {
-    combinedData += '-cursed'; // Add cursed keyword if curse parameter is true
-  }
+  const combinedData = `${unlockTime}:${encryptedData}`; // Combine unlock time with encrypted data
 
   const iv2Buffer = reverseBuffer(iv1Buffer); // Reverse iv1 to get iv2
   const cipher2 = crypto.createCipheriv('aes-256-cbc', key, iv2Buffer);
@@ -36,8 +31,8 @@ export function whisper(
   return combined;
 }
 
-// Function to decrypt data using AES-256-CBCimport
-export function peek(encryptedData: string, key: Buffer): string {
+// Function to decrypt data using AES-256-CBC with time-based condition
+export function arise(encryptedData: string, key: Buffer): string {
   const iv2 = Buffer.from(encryptedData.slice(32, 64), 'hex'); // Extract second IV
   const doubleEncrypted = encryptedData.slice(64); // Extract double encrypted data
 
@@ -47,30 +42,15 @@ export function peek(encryptedData: string, key: Buffer): string {
   decryptedLayer += decipher2.final('utf8');
 
   // Extract unlock time and first layer of encrypted data
-  let [unlockTimeStr, encryptedDataLayer] = decryptedLayer.split(':');
-
-  const isCursed = encryptedDataLayer.endsWith('-cursed');
-  if (isCursed) {
-    encryptedDataLayer = encryptedDataLayer.slice(0, -7); // Remove ':cursed' suffix
-  }
-
+  const [unlockTimeStr, encryptedDataLayer] = decryptedLayer.split(':');
   const unlockTime = parseInt(unlockTimeStr, 10);
   const currentTime = Math.floor(Date.now() / 1000); // Current UTC time
 
   // Check if the current time is past the unlock time (in UTC)
   if (currentTime < unlockTime) {
-    if (isCursed) {
-      // Simulate an infinite loop of random junk hex values
-      let junkData = '';
-      while (true) {
-        junkData += crypto.randomBytes(16).toString('hex');
-        return Buffer.from(junkData, 'hex').toString();
-      }
-    } else {
-      throw new Error(
-        'Data cannot be decrypted until the specified time period has elapsed.'
-      );
-    }
+    throw new Error(
+      'Data cannot be decrypted until the specified time period has elapsed.'
+    );
   }
 
   const iv1 = Buffer.from(encryptedData.slice(0, 32), 'hex'); // Extract first IV
@@ -82,9 +62,9 @@ export function peek(encryptedData: string, key: Buffer): string {
   return originalData;
 }
 
-const Pandro = {
-  whisper,
-  peek,
+const TimeCapsule = {
+  hibernate,
+  arise,
 };
 
-export default Pandro;
+export default TimeCapsule;
