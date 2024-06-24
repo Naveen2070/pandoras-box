@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-import { dateTimeToTimestamp, reverseBuffer } from '../util/helpers';
+import { dateTimeToTimestamp, reverseBuffer } from '../util/Helpers';
 
 // Function to encrypt data using AES-256-CBC with time-based condition
 export function hibernate(
