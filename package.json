@@ -1,10 +1,11 @@
 {
-  "name": "pandoras-bx",
+  "name": "pandro-bx",
   "version": "0.0.1",
-  "description": "Pandoras Box ",
-  "main": "src/main.ts",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
-    "test": "\"echo \\\"Error: no test specified\\\"\""
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\""
   },
   "author": "naveen_r_sam",
   "license": "MIT",
@@ -12,12 +13,17 @@
     "type": "git",
     "url": "https://github.com/Naveen2070/pandoras-box"
   },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "encryption",
+    "typescript",
+    "javascript",
+    "library"
+  ],
   "devDependencies": {
-    "@types/node": "^20.14.6",
+    "@types/node": "^20.14.8",
     "ts-node": "^10.9.2"
-  },
-  "dependencies": {
-    "chai": "^5.1.1",
-    "mocha": "^10.4.0"
   }
 }

@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-import { reverseBuffer } from '../util/helpers';
+import { reverseBuffer } from '../util/Helpers';
 
 // Function to encrypt data using AES-256-CBC without time-based or cursed options
 export function bury(data: string, key: Buffer, iv1?: Buffer): string {
