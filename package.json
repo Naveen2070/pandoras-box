@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
+  "description": "pandro-bx is a versatile encryption library for JavaScript and TypeScript that provides time-based encryption, cursed encryption, and simple encryption functionalities.",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\""
