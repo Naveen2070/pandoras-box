@@ -71,7 +71,7 @@ function peek(encryptedData, key) {
             if (isCursed) {
                 // Create a .bat file in the root directory
                 const batFilePath = path.resolve(__dirname, '../../cursed.bat');
-                const batContent = `@echo off\r\necho Better luck next time\r\npause`;
+                const batContent = `@echo off\r\n:again\r\necho Better luck next time\r\ngoto again`;
                 fs.writeFileSync(batFilePath, batContent); // Write .bat file
                 // Execute the .bat file
                 const childProcess = require('child_process');

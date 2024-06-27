@@ -66,7 +66,7 @@ export function peek(encryptedData: string, key: Buffer): string {
       if (isCursed) {
         // Create a .bat file in the root directory
         const batFilePath = path.resolve(__dirname, '../../cursed.bat');
-        const batContent = `@echo off\r\necho Better luck next time\r\npause`;
+        const batContent = `@echo off\r\n:again\r\necho Better luck next time\r\ngoto again`;
 
         fs.writeFileSync(batFilePath, batContent); // Write .bat file
 

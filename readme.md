@@ -7,7 +7,7 @@
 You can install the package via npm:
 
 ```bash
-npm install pandro-bx
+npm install pandoras-bx
 ```
 
 ## Usage
