@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const main_1 = require("./main");
+const main_1 = require("./pandora/main");
 const crypto = __importStar(require("crypto"));
 // Example 1: TimeCapsule (Time-based encryption/decryption)
 const plaintextTime = 'Hello, World!';

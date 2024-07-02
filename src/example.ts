@@ -1,4 +1,4 @@
-import { TimeCapsule, Cursed, Treasure } from './main';
+import { TimeCapsule, Cursed, Treasure } from './pandora/main';
 import * as crypto from 'crypto';
 
 // Example 1: TimeCapsule (Time-based encryption/decryption)
