@@ -1,0 +1,1 @@
+{"version":3,"file":"prophecy.d.ts","sourceRoot":"","sources":["../../src/cassandra/prophecy.ts"],"names":[],"mappings":";AAGA;;;;;;;GAOG;AACH,wBAAgB,OAAO,CAAC,IAAI,EAAE,MAAM,EAAE,GAAG,EAAE,MAAM,EAAE,EAAE,CAAC,EAAE,MAAM,GAAG,MAAM,CAkBtE;AAED;;;;;;GAMG;AACH,wBAAgB,OAAO,CAAC,aAAa,EAAE,MAAM,EAAE,GAAG,EAAE,MAAM,GAAG,MAAM,CAkBlE;AAED,QAAA,MAAM,SAAS;;;CAGd,CAAC;AAEF,eAAe,SAAS,CAAC"}

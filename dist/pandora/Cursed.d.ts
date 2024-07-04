@@ -24,3 +24,4 @@ declare const Cursed: {
     peek: typeof peek;
 };
 export default Cursed;
+//# sourceMappingURL=Cursed.d.ts.map

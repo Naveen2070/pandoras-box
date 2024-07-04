@@ -135,3 +135,4 @@ const Cursed = {
     peek,
 };
 exports.default = Cursed;
+//# sourceMappingURL=Cursed.js.map

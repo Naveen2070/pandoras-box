@@ -23,3 +23,4 @@ declare const TimeCapsule: {
     arise: typeof arise;
 };
 export default TimeCapsule;
+//# sourceMappingURL=TimeCapsule.d.ts.map

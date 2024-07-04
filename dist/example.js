@@ -70,3 +70,4 @@ try {
 catch (error) {
     console.error('Treasure - Error:', error.message);
 }
+//# sourceMappingURL=example.js.map

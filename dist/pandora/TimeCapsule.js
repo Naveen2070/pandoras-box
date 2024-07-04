@@ -101,3 +101,4 @@ const TimeCapsule = {
     arise,
 };
 exports.default = TimeCapsule;
+//# sourceMappingURL=TimeCapsule.js.map

@@ -10,3 +10,4 @@ var Cursed_1 = require("./Cursed");
 Object.defineProperty(exports, "Cursed", { enumerable: true, get: function () { return __importDefault(Cursed_1).default; } });
 var Treasure_1 = require("./Treasure");
 Object.defineProperty(exports, "Treasure", { enumerable: true, get: function () { return __importDefault(Treasure_1).default; } });
+//# sourceMappingURL=main.js.map

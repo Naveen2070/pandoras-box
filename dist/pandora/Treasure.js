@@ -86,3 +86,4 @@ const Treasure = {
     dig,
 };
 exports.default = Treasure;
+//# sourceMappingURL=Treasure.js.map

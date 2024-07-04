@@ -13,3 +13,4 @@ export declare function reverseBuffer(buffer: Buffer): Buffer;
  * @return {number} The UTC timestamp.
  */
 export declare function dateTimeToTimestamp(dateTimeStr: string): number;
+//# sourceMappingURL=helpers.d.ts.map

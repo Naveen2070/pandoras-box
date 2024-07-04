@@ -21,3 +21,4 @@ declare const Treasure: {
     dig: typeof dig;
 };
 export default Treasure;
+//# sourceMappingURL=Treasure.d.ts.map
